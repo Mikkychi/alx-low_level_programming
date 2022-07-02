@@ -1,11 +1,17 @@
-#!/bin/bash
 #include <stdio.h>
-/
+#include <string.h>
+/**
  * main - Entry point
- *  * Return: Always 0 (sucess)
- *   */
- int main(void)
+ * Description: The programmer's life quote
+ * Return: Always 0 (success)
+ */
+int main(void)
 {
-	puts("\"Programming is like building a multilingual puzzle");
+	char str1[52];
+
+	strcpy(str1, "\"programming is like building a multilingualpuzzle");
+
+	puts(str1);
+
 	return (0);
 }
