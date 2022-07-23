@@ -1,45 +1,33 @@
 #include "main.h"
 
 /**
-* print_number - prints an integer;
-* @n: integer to be printed;
-*/
-
+ * print_number - print int
+ * @n: integer
+ * Return: void
+ */
 void print_number(int n)
 {
-unsigned int tens, dig, pos = n;
-double temp_tens = 1;
+	unsigned int m, d, count;
 
-if(n == 0)
-_putchar('0');
-else
-{
-if (n < 0)
-{
-pos = n * -1;
-_putchar('-');
-}
-while (temp_tens <= pos)
-temp_tens *= 10;
-tens = temp_tens /10;
-while (tens >= 1)
-{
-dig = pos /tens;
-_putchar(dig + '0');
-pos = (pos - (tens * dig ));
-tens /= 10;
-}
-}
-}
+	if (n < 0)
+	{
+		_putchar(45);
+		m = n * -1;
+	}
+	else
+	{
+		m = n;
+	}
+	d = m;
+	count = 1;
 
-/*
-_putchar('-');
-} else
-{
-n1 = n;
+	while (d > 9)
+	{
+		d /= 10;
+		count *= 10;
+	}
+	for (; count >= 1; count /= 10)
+	{
+		_putchar(((m / count) % 10) + 45);
+	}
 }
-if (n1 / 10)
-print_number(n1 / 10);
-_putchar((n1 % 10) + '0');
-}
-*/
