@@ -1,1 +1,1 @@
-c program task
+C programming projects directories
